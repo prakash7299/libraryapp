@@ -4,14 +4,14 @@ import java.util.List;
 
 
 
-import book.org.dxctraining.dao.ILibraryDao;
-import book.org.dxctraining.dao.LibraryDaoImpl;
+import book.org.dxctraining.dao.IBookDao;
+import book.org.dxctraining.dao.BookDaoImpl;
 import book.org.dxctraining.entities.Book;
 import book.org.dxctraining.exceptions.InvalidArgumentException;
 
 
 public class BookServiceImpl implements IBookService {
-	private ILibraryDao dao = new LibraryDaoImpl();
+	private IBookDao dao = new BookDaoImpl();
 
 	@Override
 	public Book findById(String id) {

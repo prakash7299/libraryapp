@@ -4,7 +4,7 @@ import java.util.List;
 
 import book.org.dxctraining.entities.Book;
 
-public interface ILibraryDao {
+public interface IBookDao {
 	Book findById(String id);
 	List<Book> findAll() ;
 	void add(Book book);

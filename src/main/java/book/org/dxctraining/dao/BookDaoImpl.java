@@ -10,10 +10,10 @@ import java.util.Map;
 import book.org.dxctraining.entities.Book;
 import book.org.dxctraining.exceptions.BookNotFoundException;
 
-public class LibraryDaoImpl implements ILibraryDao {
+public class BookDaoImpl implements IBookDao {
 	private Map<String, Book> store = new HashMap<>();
 
-	private int generatedId;
+	private int generatedId=1;
 
 	private String generateId() {
 		Integer a=generatedId++;

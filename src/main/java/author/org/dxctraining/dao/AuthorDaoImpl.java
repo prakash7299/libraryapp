@@ -11,7 +11,7 @@ import book.org.dxctraining.entities.Book;
 public class AuthorDaoImpl implements IAuthorDao{
 	private Map<String, Author> store = new HashMap<>();
 
-	private int generatedId;
+	private int generatedId=1;
 
 	private String generateId() {
 		Integer a=generatedId++;

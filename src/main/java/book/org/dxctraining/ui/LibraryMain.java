@@ -30,12 +30,14 @@ public class LibraryMain {
 		service2.add(author4);
 		Book book1=new Book("java",600,author1);
 		service.add(book1);
-		Book book2=new Book("python",700,author2);
+		Book book2=new Book("python",700,author1);
 		service.add(book2);
-		Book book3=new Book("python",700,author3);
+		Book book3=new Book("python",700,author2);
 		service.add(book3);
-		Book book4=new Book("C++",200,author4);
+		Book book4=new Book("C++",200,author3);
 		service.add(book4);
+		Book book5=new Book("Swift",250,author4);
+		service.add(book5);
 		Book fetched=service.findById("2");
 		service.updateCost("1", 800);
 		service.remove("3");

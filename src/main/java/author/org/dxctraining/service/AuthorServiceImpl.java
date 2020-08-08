@@ -7,8 +7,8 @@ import author.org.dxctraining.dao.AuthorDaoImpl;
 import author.org.dxctraining.dao.IAuthorDao;
 import author.org.dxctraining.entities.Author;
 import author.org.dxctraining.exceptions.AuthorNotFoundException;
-import book.org.dxctraining.dao.ILibraryDao;
-import book.org.dxctraining.dao.LibraryDaoImpl;
+import book.org.dxctraining.dao.IBookDao;
+import book.org.dxctraining.dao.BookDaoImpl;
 import book.org.dxctraining.entities.Book;
 import book.org.dxctraining.exceptions.InvalidArgumentException;
 
