@@ -10,11 +10,11 @@ import book.org.dxctraining.exceptions.*;
 import book.org.dxctraining.service.BookServiceImpl;
 import book.org.dxctraining.service.IBookService;
 
-public class BookMain {
+public class LibraryMain {
 	private IBookService service = new BookServiceImpl();
 	private IAuthorService service2=new AuthorServiceImpl();
 	public static void main(String args[]) {
-		BookMain obj2=new BookMain();
+		LibraryMain obj2=new LibraryMain();
 		obj2.runapp();
 	
 	}

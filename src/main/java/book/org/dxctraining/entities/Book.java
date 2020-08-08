@@ -1,4 +1,5 @@
 package book.org.dxctraining.entities;
+
 import author.org.dxctraining.entities.Author;
 
 public class Book {
@@ -38,5 +39,25 @@ public class Book {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
+	@Override
+	public int hashCode() {
+		int hash=id.hashCode();
+		return hash;
+	}
+		@Override
+		public boolean equals(Object arg) {
+			if(this==arg) {
+				return true;
+			}
+			
+		   if(arg==null || !(arg instanceof Book) ) {
+				return false;
+		   }
+			
+		    Book that=(Book)arg;	
+			boolean isequal=this.id.equals(that.id);
+			return isequal;
+		}
+
 	
 }

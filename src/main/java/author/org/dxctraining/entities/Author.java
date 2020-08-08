@@ -1,5 +1,6 @@
 package author.org.dxctraining.entities;
 
+
 public class Author {
  private String id;
  private String name;
@@ -18,5 +19,25 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
+@Override
+public int hashCode() {
+	int a=id.hashCode();
+	return a;
+}
+	@Override
+	public boolean equals(Object arg) {
+		if(this==arg) {
+			return true;
+		}
+		
+	   if(arg==null || !(arg instanceof Author) ) {
+			return false;
+	   }
+		
+	    Author that=(Author)arg;	
+		boolean isequal=this.id.equals(that.id);
+		return isequal;
+	}
+
  
 }
