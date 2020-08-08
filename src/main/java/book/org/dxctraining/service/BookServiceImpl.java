@@ -45,9 +45,15 @@ public class BookServiceImpl implements IBookService {
 	
 	public void checkBook(Book book) {
 		if(book==null) {
-			throw new InvalidArgumentException("Author cant be null or empty");
+			throw new InvalidArgumentException("Book cant be null");
 				
 		}
+	}
+	public void checkCost(double cost) {
+	 Double newCost=cost;
+	 if(newCost==null) {
+		 throw new InvalidArgumentException("cost cant be null");
+	 }
 	}
 
 	
@@ -55,6 +61,7 @@ public class BookServiceImpl implements IBookService {
 	@Override
 	public Book updateCost(String id,double newCost) {
 		checkId(id);
+		checkCost(newCost);
 		Book book = dao.updateCost(id, newCost);
 	    return book;
 	}
