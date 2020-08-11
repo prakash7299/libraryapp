@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import library.JavaConfig;
+import library.book.org.dxctraining.ui.*;
 import library.author.org.dxctraining.entities.Author;
 import library.author.org.dxctraining.service.AuthorServiceImpl;
 import library.author.org.dxctraining.service.IAuthorService;
