@@ -1,6 +1,6 @@
-package book.org.dxctraining.entities;
+package library.book.org.dxctraining.entities;
 
-import author.org.dxctraining.entities.Author;
+import library.author.org.dxctraining.entities.Author;
 
 public class Book {
 	private String id;

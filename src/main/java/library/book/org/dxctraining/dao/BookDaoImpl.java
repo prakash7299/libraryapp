@@ -1,15 +1,18 @@
-package book.org.dxctraining.dao;
+package library.book.org.dxctraining.dao;
 
 import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
 
-import book.org.dxctraining.entities.Book;
-import book.org.dxctraining.exceptions.BookNotFoundException;
+import library.book.org.dxctraining.entities.Book;
+import library.book.org.dxctraining.exceptions.BookNotFoundException;
 
+@Repository
 public class BookDaoImpl implements IBookDao {
 	private Map<String, Book> store = new HashMap<>();
 

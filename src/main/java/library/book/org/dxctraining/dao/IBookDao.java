@@ -1,10 +1,10 @@
-package book.org.dxctraining.service;
+package library.book.org.dxctraining.dao;
 
 import java.util.List;
 
-import book.org.dxctraining.entities.Book;
+import library.book.org.dxctraining.entities.Book;
 
-public interface IBookService {
+public interface IBookDao {
 	Book findById(String id);
 	List<Book> findAll() ;
 	void add(Book book);

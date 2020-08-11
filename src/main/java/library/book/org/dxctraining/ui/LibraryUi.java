@@ -1,23 +1,28 @@
-package book.org.dxctraining.ui;
+package library.book.org.dxctraining.ui;
 
 import java.util.List;
 
-import author.org.dxctraining.entities.Author;
-import author.org.dxctraining.service.AuthorServiceImpl;
-import author.org.dxctraining.service.IAuthorService;
-import book.org.dxctraining.entities.Book;
-import book.org.dxctraining.exceptions.*;
-import book.org.dxctraining.service.BookServiceImpl;
-import book.org.dxctraining.service.IBookService;
+import javax.annotation.PostConstruct;
 
-public class LibraryMain {
-	private IBookService service = new BookServiceImpl();
-	private IAuthorService service2=new AuthorServiceImpl();
-	public static void main(String args[]) {
-		LibraryMain obj2=new LibraryMain();
-		obj2.runapp();
-	
-	}
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import library.author.org.dxctraining.entities.Author;
+import library.author.org.dxctraining.service.AuthorServiceImpl;
+import library.author.org.dxctraining.service.IAuthorService;
+import library.book.org.dxctraining.entities.Book;
+import library.book.org.dxctraining.exceptions.BookNotFoundException;
+import library.book.org.dxctraining.exceptions.InvalidArgumentException;
+import library.book.org.dxctraining.service.BookServiceImpl;
+import library.book.org.dxctraining.service.IBookService;
+
+@Component
+public class LibraryUi {
+	@Autowired
+	private IBookService service;
+	@Autowired
+	private IAuthorService service2;
+	@PostConstruct
 	private void runapp() {
 		try {
 		Author author1=new Author("prakash");
@@ -68,4 +73,5 @@ public class LibraryMain {
 		Author author = book.getAuthor();
 		System.out.println("Id : " + book.getId() + " Name : " + book.getName()+" Cost : "+book.getCost()+" Authorid =" + author.getId() + " AuthorName : " + author.getName());
 	}
+
 }

@@ -1,4 +1,4 @@
-package author.org.dxctraining.entities;
+package library.author.org.dxctraining.entities;
 
 
 public class Author {

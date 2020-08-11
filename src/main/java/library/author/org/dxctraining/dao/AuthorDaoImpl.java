@@ -1,13 +1,15 @@
-package author.org.dxctraining.dao;
+package library.author.org.dxctraining.dao;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import author.org.dxctraining.entities.Author;
-import author.org.dxctraining.exceptions.AuthorNotFoundException;
-import book.org.dxctraining.entities.Book;
+import org.springframework.stereotype.Repository;
 
+import library.author.org.dxctraining.entities.Author;
+import library.author.org.dxctraining.exceptions.AuthorNotFoundException;
+import library.book.org.dxctraining.entities.Book;
 
+@Repository
 public class AuthorDaoImpl implements IAuthorDao{
 	private Map<String, Author> store = new HashMap<>();
 

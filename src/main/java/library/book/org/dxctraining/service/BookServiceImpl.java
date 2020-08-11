@@ -1,17 +1,19 @@
-package book.org.dxctraining.service;
+package library.book.org.dxctraining.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import library.book.org.dxctraining.dao.IBookDao;
+import library.book.org.dxctraining.dao.BookDaoImpl;
+import library.book.org.dxctraining.entities.Book;
+import library.book.org.dxctraining.exceptions.InvalidArgumentException;
 
-import book.org.dxctraining.dao.IBookDao;
-import book.org.dxctraining.dao.BookDaoImpl;
-import book.org.dxctraining.entities.Book;
-import book.org.dxctraining.exceptions.InvalidArgumentException;
-
-
+@Service
 public class BookServiceImpl implements IBookService {
-	private IBookDao dao = new BookDaoImpl();
+	@Autowired
+	private IBookDao dao;
 
 	@Override
 	public Book findById(String id) {

@@ -1,4 +1,4 @@
-package book.org.dxctraining.exceptions;
+package library.book.org.dxctraining.exceptions;
 
 public class InvalidArgumentException extends RuntimeException{
 
